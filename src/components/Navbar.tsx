@@ -1,6 +1,21 @@
 import profileTuro from '../assets/profileTuro.png'
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
+    const [unlocked, toggleLocked] = useState(false)
+    const [seconds, setSeconds] = useState(0)
+    function handleLockClick() {
+        toggleLocked(!unlocked)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => { //TODO understand the setInterval function
+            setSeconds(prevSeconds => prevSeconds + 1)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    }, [])
+
     return (
         <nav className="navbar">
             <div className="nav-container">
@@ -12,6 +27,9 @@ export default function Navbar() {
                 <a>Interests</a>
                 <a>Coursework</a>
                 <a>Resume</a>
+                <span onClick={handleLockClick}>Click here</span>
+                <span>{unlocked ? 'Unlocked' : 'Locked'}</span>
+                <span>You have been here for {seconds} seconds</span>
             </div>
         </nav>
     )
