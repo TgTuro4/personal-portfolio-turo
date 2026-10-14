@@ -1,8 +1,10 @@
+import profileTuro from '../assets/profileTuro.png'
+
 export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="nav-container">
-                <a><img src="../assets/profileTuro.png" alt="Profile"></img></a>
+                <a><img src={profileTuro} alt="Profile" style={{ width: '20px', height: 'auto' }} /></a>
                 <a>About Turo</a>
                 <a>Tech Stack</a>
                 <a>Projects</a>
