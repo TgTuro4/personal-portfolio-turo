@@ -27,6 +27,7 @@ export default function Navbar() {
                 <a>Interests</a>
                 <a>Coursework</a>
                 <a>Resume</a>
+                <a>Recommendations</a>
                 <span onClick={handleLockClick}>Click here</span>
                 <span>{unlocked ? 'Unlocked' : 'Locked'}</span>
                 <span>You have been here for {seconds} seconds</span>
