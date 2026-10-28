@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Navbar from './components/Navbar'
 import PortfolioCard from './components/PortfolioCard'
+import MessageBox from './components/MessageBox.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -12,5 +13,6 @@ createRoot(document.getElementById('root')!).render(
       <PortfolioCard title="Project 1" description="Description for Project 1" imageUrl="/path/to/image1.jpg" />
       <PortfolioCard title="Project 2" description="Description for Project 2" imageUrl="/path/to/image2.jpg" />
     </div>
+    <MessageBox/>
   </StrictMode>,
 )
